@@ -144,7 +144,7 @@ friends = [{
     ]
   }, 
   {
-    "name":"A Good Boi",
+    "name":"a Good Boi",
     "photo":"https://pics.me.me/when-ur-human-says-whos-a-good-boy-and-you-17575372.png",
     "scores":[
         2,

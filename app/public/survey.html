@@ -18,9 +18,18 @@
     <div id="results">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-                    <h1 class="p-4">Congratulations! You would be most compatible with
-                        <span></span>!</h1>
+                <div class="col-sm-12 text-center">
+                    <h1 class="p-4">Congratulations <span id="userName"></span>! You would be most compatible with
+                        <span id="friendName"></span>!</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="" alt="" id="userImage">
+                </div>
+                <div class="col-sm-6">
+                        <img id="friendImage" src="" alt="">
+
                 </div>
             </div>
         </div>
@@ -33,11 +42,11 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <form action="/api/friends" method="post">
-
+                <!-- <form action="/api/friends" method="post"> -->
+                <form id="surveyForm" method="post">
                     <div class="form-group">
-                    <label>What is your name?</label>
-                    <input id="firstName" type="text" name="name"  class="form-control" placeholder="Enter Name">
+                        <label>What is your name?</label>
+                        <input id="firstName" type="text" name="name" class="form-control" placeholder="Enter Name">
                     </div>
 
                     <div class="form-group">
@@ -169,7 +178,7 @@
                         <br>
                     </div>
 
-                    <input type="submit" class="btn btn-primary">
+                    <input id="sub" type="submit" class="btn btn-primary">
                 </form>
             </div>
         </div>

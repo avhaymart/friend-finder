@@ -8,6 +8,7 @@ module.exports = function (app, path, data) {
     app.post("/api/friends", function (req, res) {
         var userScore = [];
         var opponent = [];
+        console.log(req.body);
         for (i=0;i<12;i++) {
             if (isNaN(parseInt(req.body[i]))) {
                 console.log("NaN, " + req.body[i]);
@@ -41,9 +42,8 @@ module.exports = function (app, path, data) {
 
         console.log("Best match is " + data[opponent.indexOf(lowest)].name);
 
-        // I wasn't able to figure out how to send the information back to the current webpage and have it display :(
-        res.send("<h1>Best match is " + data[opponent.indexOf(lowest)].name + "</h1><br><img src='"+data[opponent.indexOf(lowest)].photo+"'>");
-        
+        var response = [data[opponent.indexOf(lowest)].name, data[opponent.indexOf(lowest)].photo];
+        res.send(response);
     });
     
 }
