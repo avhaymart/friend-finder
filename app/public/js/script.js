@@ -1,3 +1,3 @@
 document.getElementById("startSurvey").addEventListener("click", function(){
-    window.location.href = "../survey";
+    window.location.href = "/survey";
 })
